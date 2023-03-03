@@ -1,0 +1,517 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+local player = game:GetService("Players").LocalPlayer
+
+local ui = Instance.new("ScreenGui")
+local border = Instance.new("Frame")
+local main = Instance.new("Frame")
+local pp_script = Instance.new("TextButton")
+local shade = Instance.new("Frame")
+local shade_2 = Instance.new("Frame")
+local throw_script = Instance.new("TextButton")
+local shade_3 = Instance.new("Frame")
+local throw_script_2 = Instance.new("TextButton")
+local shade_4 = Instance.new("Frame")
+local attach_script = Instance.new("TextButton")
+local shade_5 = Instance.new("Frame")
+local respawn_script = Instance.new("TextButton")
+local shade_6 = Instance.new("Frame")
+local text = Instance.new("TextLabel")
+
+local function sendmessage(firstext, secondtext, id)
+	-- Gui to Lua
+	-- Version: 3.2
+
+	-- Instances:
+
+	local send_text = Instance.new("Frame")
+	local shade = Instance.new("Frame")
+	local image = Instance.new("ImageLabel")
+	local text_first = Instance.new("TextLabel")
+	local shade_2 = Instance.new("Frame")
+	local text_last = Instance.new("TextLabel")
+	local shade_3 = Instance.new("Frame")
+
+	--Properties:
+
+	send_text.Name = "send_text"
+	send_text.Parent = ui
+	send_text.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+	send_text.BorderSizePixel = 0
+	send_text.Position = UDim2.new(1, 0, 1, -210)
+	send_text.Size = UDim2.new(0, 300, 0, 200)
+	send_text.ZIndex = 5
+	game:GetService("TweenService"):Create(send_text, TweenInfo.new(2, Enum.EasingStyle.Back, Enum.EasingDirection.InOut, 0, true, 0), {Position = UDim2.new(1, -310,1, -210); Rotation = -5}):Play()
+	local sfx = Instance.new("Sound", workspace)
+	sfx.SoundId = "rbxassetid://8784885431"
+	sfx.Volume = 2
+	sfx:Play()
+
+	shade.Name = "shade"
+	shade.Parent = send_text
+	shade.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	shade.BorderSizePixel = 0
+	shade.Position = UDim2.new(0, 5, 0, 5)
+	shade.Size = UDim2.new(1, 0, 1, 0)
+	shade.ZIndex = 2
+
+	image.Name = "image"
+	image.Parent = send_text
+	image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	image.Position = UDim2.new(0, 5, 0, 5)
+	image.Size = UDim2.new(0, 125, 0, 125)
+	image.ZIndex = 10
+	image.Image = id
+	image.BackgroundTransparency = 1
+
+	text_first.Name = "text_first"
+	text_first.Parent = send_text
+	text_first.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+	text_first.BorderSizePixel = 0
+	text_first.Position = UDim2.new(0.47333324, 0, 0.25, 0)
+	text_first.Size = UDim2.new(0, 151, 0, 35)
+	text_first.ZIndex = 7
+	text_first.Font = Enum.Font.RobotoMono
+	text_first.Text = firstext
+	text_first.TextColor3 = Color3.fromRGB(255, 255, 255)
+	text_first.TextSize = 17.000
+	text_first.TextWrapped = true
+	text_first.TextXAlignment = Enum.TextXAlignment.Left
+
+	shade_2.Name = "shade"
+	shade_2.Parent = text_first
+	shade_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	shade_2.BorderSizePixel = 0
+	shade_2.Position = UDim2.new(0, 5, 0, 5)
+	shade_2.Size = UDim2.new(1, 0, 1, 0)
+	shade_2.ZIndex = 6
+
+	text_last.Name = "text_last"
+	text_last.Parent = send_text
+	text_last.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+	text_last.BorderSizePixel = 0
+	text_last.Position = UDim2.new(0.0166666675, 0, 0.735000014, 0)
+	text_last.Size = UDim2.new(0, 288, 0, 35)
+	text_last.ZIndex = 7
+	text_last.Font = Enum.Font.RobotoMono
+	text_last.Text = secondtext
+	text_last.TextColor3 = Color3.fromRGB(255, 255, 255)
+	text_last.TextSize = 17.000
+	text_last.TextWrapped = true
+	text_last.TextXAlignment = Enum.TextXAlignment.Left
+
+	shade_3.Name = "shade"
+	shade_3.Parent = text_last
+	shade_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	shade_3.BorderSizePixel = 0
+	shade_3.Position = UDim2.new(0, 5, 0, 5)
+	shade_3.Size = UDim2.new(1, 0, 1, 0)
+	shade_3.ZIndex = 6
+end
+
+ui.Name = "ui"
+ui.Parent = game.CoreGui
+
+border.Name = "border"
+border.Parent = ui
+border.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+border.BorderSizePixel = 0
+border.Position = UDim2.new(-0.5, 0,0.309, 0)
+border.Rotation = -5
+border.Size = UDim2.new(0, 600, 0, 35)
+border.ZIndex = 5
+main.Name = "main"
+main.Parent = border
+main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0, 0, 0, 35)
+main.Size = UDim2.new(0, 600, 0, 335)
+
+pp_script.Name = "pp_script"
+pp_script.Parent = main
+pp_script.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+pp_script.BorderSizePixel = 0
+pp_script.Position = UDim2.new(0.0166666657, 0, 0.811940312, 0)
+pp_script.Size = UDim2.new(0, 579, 0, 50)
+pp_script.ZIndex = 3
+pp_script.Font = Enum.Font.RobotoMono
+pp_script.Text = "Load PP"
+pp_script.TextColor3 = Color3.fromRGB(255, 255, 255)
+pp_script.TextSize = 20.000
+pp_script.TextWrapped = true
+local ball1_position = Vector3.new(0.514, -1.5, -0.486)
+local ball2_position = Vector3.new(-0.486, -1.5, -0.514)
+local front1_position = Vector3.new(0.028, -1, -1)
+local front2_position = Vector3.new(0.056, -1, -1.999)
+local front3_position = Vector3.new(0.07, -1, -2.499)
+pp_script.MouseButton1Down:Connect(function()
+	pcall(function()
+		local character = player.Character:GetChildren()
+		for _, accessory in pairs(character) do
+			pcall(function()
+				if accessory:IsA("Accessory") then
+					print("accessory")
+					if accessory.Name == "Pal Hair" then
+						for _, descendant in pairs(accessory.Handle:GetDescendants()) do
+							pcall(function()
+								if descendant:IsA("SpecialMesh") then
+									-- skip
+								else
+									descendant:Destroy()
+								end
+							end)
+						end
+					else
+						local handle = accessory.Handle
+						handle:ClearAllChildren()
+					end
+				end
+			end)
+		end
+	end)
+	local character = player.Character:GetChildren()
+	local pal = nil
+	local accessorys = {}
+	local number = 0
+	for _, accessory in pairs(character) do
+		pcall(function()
+			if accessory:IsA("Accessory") then
+				number = number + 1
+				if accessory.Name == "Pal Hair" then
+					pal = accessory
+				else
+					table.insert(accessorys, accessory)
+				end
+			end
+		end)
+	end
+	local attachment1 = Instance.new("Attachment", player.Character.Torso)
+	local attachment2 = Instance.new("Attachment", player.Character.Torso)
+	local attachment3 = Instance.new("Attachment", player.Character.Torso)
+	local attachment4 = Instance.new("Attachment", player.Character.Torso)
+	local attachment5 = Instance.new("Attachment", player.Character.Torso)
+	attachment1.Position = ball1_position
+	attachment2.Position = ball2_position
+	attachment3.Position = front1_position
+	attachment4.Position = front2_position
+	attachment5.Position = front3_position
+	local atc_sb1 = Instance.new("Attachment", accessorys[1].Handle)
+	local atc_sb2 = Instance.new("Attachment", accessorys[2].Handle)
+	local atc_sb3 = Instance.new("Attachment", accessorys[3].Handle)
+	local atc_sb4 = Instance.new("Attachment", accessorys[4].Handle)
+	local atc_sb5 = Instance.new("Attachment", pal.Handle)
+	local position1 = Instance.new("AlignPosition", player.Character.Torso)
+	local position2 = Instance.new("AlignPosition", player.Character.Torso)
+	local position3 = Instance.new("AlignPosition", player.Character.Torso)
+	local position4 = Instance.new("AlignPosition", player.Character.Torso)
+	local position5 = Instance.new("AlignPosition", player.Character.Torso)
+	position1.Attachment0 = atc_sb1
+	position1.Attachment1 = attachment1
+	position1.RigidityEnabled = true
+	position2.Attachment0 = atc_sb2
+	position2.Attachment1 = attachment2
+	position2.RigidityEnabled = true
+	position3.Attachment0 = atc_sb3
+	position3.Attachment1 = attachment3
+	position3.RigidityEnabled = true
+	position4.Attachment0 = atc_sb4
+	position4.Attachment1 = attachment4
+	position4.RigidityEnabled = true
+	position5.Attachment0 = atc_sb5
+	position5.Attachment1 = attachment5
+	position5.RigidityEnabled = true
+	local function set_properities()
+		local dmms1 = Instance.new("Attachment", player.Character.Torso)
+		local dmms2 = Instance.new("Attachment", player.Character.Torso)
+		local dmms3 = Instance.new("Attachment", player.Character.Torso)
+		local dmms4 = Instance.new("Attachment", player.Character.Torso)
+		local dmms5 = Instance.new("Attachment", player.Character.Torso)
+		local fmms1 = Instance.new("Attachment", accessorys[1].Handle)
+		local fmms2 = Instance.new("Attachment", accessorys[2].Handle)
+		local fmms3 = Instance.new("Attachment", accessorys[3].Handle)
+		local fmms4 = Instance.new("Attachment", accessorys[4].Handle)
+		local fmms5 = Instance.new("Attachment", pal.Handle)
+		local orientation1 = Instance.new("AlignOrientation", player.Character.Torso)
+		local orientation2 = Instance.new("AlignOrientation", player.Character.Torso)
+		local orientation3 = Instance.new("AlignOrientation", player.Character.Torso)
+		local orientation4 = Instance.new("AlignOrientation", player.Character.Torso)
+		local orientation5 = Instance.new("AlignOrientation", player.Character.Torso)
+		orientation1.Attachment0 = fmms1
+		orientation2.Attachment0 = fmms2
+		orientation3.Attachment0 = fmms3
+		orientation4.Attachment0 = fmms4
+		orientation5.Attachment0 = fmms5
+		orientation1.Attachment1 = dmms1
+		orientation2.Attachment1 = dmms2
+		orientation3.Attachment1 = dmms3
+		orientation4.Attachment1 = dmms4
+		orientation5.Attachment1 = dmms5
+		orientation1.RigidityEnabled = true
+		orientation2.RigidityEnabled = true
+		orientation3.RigidityEnabled = true
+		orientation4.RigidityEnabled = true
+		orientation5.RigidityEnabled = true
+		dmms5.Orientation = Vector3.new(-90, 0, 0)
+	end
+	set_properities()
+	sendmessage(" PP Executed .", " Found "..number.." Items .", "rbxassetid://8126977748")
+end)
+
+shade.Name = "shade"
+shade.Parent = pp_script
+shade.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shade.BorderSizePixel = 0
+shade.Position = UDim2.new(0, 5, 0, 5)
+shade.Size = UDim2.new(1, 0, 1, 0)
+shade.ZIndex = 2
+
+shade_2.Name = "shade"
+shade_2.Parent = main
+shade_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shade_2.BorderSizePixel = 0
+shade_2.Position = UDim2.new(0, 5, 0, -30)
+shade_2.Size = UDim2.new(1, 0, 1, 35)
+shade_2.ZIndex = 0
+
+throw_script.Name = "throw_script"
+throw_script.Parent = main
+throw_script.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+throw_script.BorderSizePixel = 0
+throw_script.Position = UDim2.new(0.0166666657, 0, 0.611940324, 0)
+throw_script.Size = UDim2.new(0, 579, 0, 50)
+throw_script.ZIndex = 3
+throw_script.Font = Enum.Font.RobotoMono
+throw_script.Text = "Throw First Hat"
+throw_script.TextColor3 = Color3.fromRGB(255, 255, 255)
+throw_script.TextSize = 20.000
+throw_script.TextWrapped = true
+throw_script.MouseButton1Down:Connect(function()
+	sendmessage(" Throwing .", " Throwing In 3's .", "rbxassetid://8126977748")
+	local player = game:GetService("Players").LocalPlayer
+	local hat = player.Character:FindFirstChildOfClass("Accessory")
+	local handle = hat.Handle
+	local box = Instance.new("SelectionBox", handle)
+	box.Adornee = handle
+	box.LineThickness = 0.01
+	box.Color3 = Color3.fromRGB(105, 255, 153)
+	wait(3)
+	sendmessage(" Throwed .", " Flinged The Hat !", "rbxassetid://8126977748")
+	handle:ClearAllChildren()
+	handle.Velocity = CFrame.lookAt(handle.Position, player:GetMouse().Hit.Position).LookVector * 300
+	handle.CanCollide = false
+	wait(0.05)
+	handle.CanCollide = true
+end)
+
+shade_3.Name = "shade"
+shade_3.Parent = throw_script
+shade_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shade_3.BorderSizePixel = 0
+shade_3.Position = UDim2.new(0, 5, 0, 5)
+shade_3.Size = UDim2.new(1, 0, 1, 0)
+shade_3.ZIndex = 2
+
+throw_script_2.Name = "throw_script"
+throw_script_2.Parent = main
+throw_script_2.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+throw_script_2.BorderSizePixel = 0
+throw_script_2.Position = UDim2.new(0.0166666657, 0, 0.423880607, 0)
+throw_script_2.Size = UDim2.new(0, 579, 0, 50)
+throw_script_2.ZIndex = 3
+throw_script_2.Font = Enum.Font.RobotoMono
+throw_script_2.Text = "Throw All Hats"
+throw_script_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+throw_script_2.TextSize = 20.000
+throw_script_2.TextWrapped = true
+throw_script_2.MouseButton1Down:Connect(function()
+	local player = game:GetService("Players").LocalPlayer
+	local hats = player.Character:GetChildren()
+	sendmessage(" Throwing .", " Throwing In 3's .", "rbxassetid://8126977748")
+	delay(3, function()
+		sendmessage(" Throwed .", " Flinged The Hat !", "rbxassetid://8126977748")
+	end)
+	for _, hat in pairs(hats) do
+		pcall(function()
+			if hat:IsA("Accessory") then
+				local handle = hat.Handle
+				local box = Instance.new("SelectionBox", handle)
+				box.Adornee = handle
+				box.LineThickness = 0.01
+				box.Color3 = Color3.fromRGB(105, 255, 153)
+				delay(3, function()
+					handle:ClearAllChildren()
+					handle.Velocity = CFrame.lookAt(handle.Position, player:GetMouse().Hit.Position).LookVector * 300
+					handle.CanCollide = false
+					delay(0.05, function()
+						handle.CanCollide = true
+					end)
+				end)
+			end
+		end)
+	end
+end)
+
+shade_4.Name = "shade"
+shade_4.Parent = throw_script_2
+shade_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shade_4.BorderSizePixel = 0
+shade_4.Position = UDim2.new(0, 5, 0, 5)
+shade_4.Size = UDim2.new(1, 0, 1, 0)
+shade_4.ZIndex = 2
+
+attach_script.Name = "attach_script"
+attach_script.Parent = main
+attach_script.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+attach_script.BorderSizePixel = 0
+attach_script.Position = UDim2.new(0.0133333318, 0, 0.0388059914, 0)
+attach_script.Size = UDim2.new(0, 579, 0, 50)
+attach_script.ZIndex = 3
+attach_script.Font = Enum.Font.RobotoMono
+attach_script.Text = "Attach Netlag"
+attach_script.TextColor3 = Color3.fromRGB(255, 255, 255)
+attach_script.TextSize = 20.000
+attach_script.TextWrapped = true
+attach_script.MouseButton1Down:Connect(function()
+	pcall(function()
+		-- Netless ReAnimation
+		-- Created by MiAiHsIs1226
+		function Senti_IiiiIiIiIiiIiIIiIIiIi_(a,_)if a~=nil then if _>-2+(-41)+(2)+(72)+(95)+(-91)+(30)then print("you're usin fps unlock")end if Senti_IiiiIiIiIiiIiIIiIIiIie then print("you usin synapse.congratulations(I have no idea what to say)")end if("hello")=="x68x65x6Cx6Cx6F"then print("are you usin a bad exploit?")end return true elseif a==nil then return true else return end end Senti_IiiiIiIiIiiIiIIiIIiIie=Senti_IiiiIiIiIiiIiIIiIIiIie or nil Senti_IiiiIiIiIiiIiIIiIIiIid=Senti_IiiiIiIiIiiIiIIiIIiIid or Instance.new("Script") Senti_IiiiIiIiIiiIiIIiIIiIic=game:GetService("Workspace"):GetRealPhysicsFPS() Senti_IiiiIiIiIiiIiIIiIIiIib=game:GetService("Players")['LocalPlayer'] Senti_IiiiIiIiIiiIiIIiIIiIia=Senti_IiiiIiIiIiiIiIIiIIiIi_(Senti_IiiiIiIiIiiIiIIiIIiIib,Senti_IiiiIiIiIiiIiIIiIIiIic) if(not Senti_IiiiIiIiIiiIiIIiIIiIia)==true then return pcall(function()game:GetService("TestService"):Fail("Cannot load script")end)end return xpcall(function(a,b)local c=a local _=b a,b=nil,nil table.clear(c()) local _={} local b={} b.number=(65-(20/100)+.2) local d=getmetatable(newproxy(true)) local a=getmetatable(setmetatable({},{})) spawn(function()if c()then wait() d[2](d[3](d[4]))()else return"bitch"end end) local _=function(_)local d="" local a=function(_)return(_:gsub(".",function(_)if tonumber(_)then return _ else return""end end))end for _,c in next,string.split(_,"\a")do local _=tonumber(a(c)) if _~=nil then d=d..string.char(_-b.number)elseif c then d=d..c end end return d:sub(4)end a.index=_([['{\173;\176;\162;\165;\180;\181;\179;\170;\175;\168;}']]) d={} d[1-(20/100)+.2]=c() d[2-(20/100)+.2]=d[1][a.index] d[3-(20/100)+.2]=_ d[4-(20/100)+.2]=[['{\167;\176;\179;\97;\170;\109;\183;\97;\170;\175;\97;\175;\166;\185;\181;\109;\97;\168;\162;\174;\166;\123;\136;\166;\181;\148;\166;\179;\183;\170;\164;\166;\105;\99;\145;\173;\162;\186;\166;\179;\180;\99;\106;\111;\141;\176;\164;\162;\173;\145;\173;\162;\186;\166;\179;\111;\132;\169;\162;\179;\162;\164;\181;\166;\179;\123;\136;\166;\181;\133;\166;\180;\164;\166;\175;\165;\162;\175;\181;\180;\105;\106;\97;\165;\176;\78;\75;\170;\167;\97;\183;\123;\138;\180;\130;\105;\99;\131;\162;\180;\166;\145;\162;\179;\181;\99;\106;\97;\162;\175;\165;\97;\183;\111;\143;\162;\174;\166;\97;\191;\126;\99;\137;\182;\174;\162;\175;\176;\170;\165;\147;\176;\176;\181;\145;\162;\179;\181;\99;\97;\181;\169;\166;\175;\97;\78;\75;\168;\162;\174;\166;\123;\136;\166;\181;\148;\166;\179;\183;\170;\164;\166;\105;\99;\147;\182;\175;\148;\166;\179;\183;\170;\164;\166;\99;\106;\111;\137;\166;\162;\179;\181;\163;\166;\162;\181;\123;\164;\176;\175;\175;\166;\164;\181;\105;\167;\182;\175;\164;\181;\170;\176;\175;\105;\106;\78;\75;\183;\111;\151;\166;\173;\176;\164;\170;\181;\186;\97;\126;\97;\151;\166;\164;\181;\176;\179;\116;\111;\175;\166;\184;\105;\110;\115;\118;\111;\119;\109;\113;\109;\113;\106;\78;\75;\166;\175;\165;\106;\78;\75;\168;\162;\174;\166;\123;\136;\166;\181;\148;\166;\179;\183;\170;\164;\166;\105;\99;\147;\182;\175;\148;\166;\179;\183;\170;\164;\166;\99;\106;\111;\137;\166;\162;\179;\181;\163;\166;\162;\181;\123;\164;\176;\175;\175;\166;\164;\181;\105;\167;\182;\175;\164;\181;\170;\176;\175;\105;\106;\78;\75;\184;\162;\170;\181;\105;\111;\113;\114;\106;\78;\75;\183;\111;\151;\166;\173;\176;\164;\170;\181;\186;\97;\126;\97;\151;\166;\164;\181;\176;\179;\116;\111;\175;\166;\184;\105;\113;\109;\113;\109;\113;\106;\78;\75;\166;\175;\165;\106;\78;\75;\166;\175;\165;\78;\75;\166;\175;\165;\78;\75;\78;\75;\168;\162;\174;\166;\123;\136;\166;\181;\148;\166;\179;\183;\170;\164;\166;\105;\99;\148;\181;\162;\179;\181;\166;\179;\136;\182;\170;\99;\106;\123;\148;\166;\181;\132;\176;\179;\166;\105;\99;\148;\166;\175;\165;\143;\176;\181;\170;\167;\170;\164;\162;\181;\170;\176;\175;\99;\109;\97;\188;\97;\78;\75;\149;\170;\181;\173;\166;\97;\126;\97;\99;\143;\176;\181;\170;\167;\170;\164;\162;\181;\170;\176;\175;\99;\124;\78;\75;\149;\166;\185;\181;\97;\126;\97;\99;\143;\166;\181;\173;\166;\180;\180;\97;\162;\164;\181;\170;\183;\162;\181;\166;\165;\157;\175;\132;\179;\166;\162;\181;\166;\165;\97;\163;\186;\97;\142;\170;\130;\170;\137;\180;\138;\180;\114;\115;\115;\119;\99;\124;\78;\75;\138;\164;\176;\175;\97;\126;\97;\99;\179;\163;\185;\181;\169;\182;\174;\163;\123;\112;\112;\181;\186;\177;\166;\126;\130;\180;\180;\166;\181;\103;\170;\165;\126;\118;\114;\113;\120;\114;\121;\115;\114;\114;\117;\103;\184;\126;\114;\118;\113;\103;\169;\126;\114;\118;\113;\99;\124;\78;\75;\133;\182;\179;\162;\181;\170;\176;\175;\97;\126;\97;\114;\119;\124;\190;\106;\78;\75;}']]end,function(_)game:GetService("TestService"):Fail("\n"..(script or Instance.new('Script')):GetFullName().." has occurred an error:".._)end,getfenv,setfenv)
+	end)
+	sendmessage(" Netlag .", " Netlag Attached .", "rbxassetid://8126977748")
+end)
+
+shade_5.Name = "shade"
+shade_5.Parent = attach_script
+shade_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shade_5.BorderSizePixel = 0
+shade_5.Position = UDim2.new(0, 5, 0, 5)
+shade_5.Size = UDim2.new(1, 0, 1, 0)
+shade_5.ZIndex = 2
+
+respawn_script.Name = "respawn_script"
+respawn_script.Parent = main
+respawn_script.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+respawn_script.BorderSizePixel = 0
+respawn_script.Position = UDim2.new(0.0183333308, 0, 0.235820919, 0)
+respawn_script.Size = UDim2.new(0, 579, 0, 50)
+respawn_script.ZIndex = 3
+respawn_script.Font = Enum.Font.RobotoMono
+respawn_script.Text = "Respawn Character"
+respawn_script.TextColor3 = Color3.fromRGB(255, 255, 255)
+respawn_script.TextSize = 20.000
+respawn_script.TextWrapped = true
+respawn_script.MouseButton1Down:Connect(function()
+	player.Character:Destroy()
+	sendmessage(" Reset .", " Reseted Character .", "rbxassetid://8126977748")
+end)
+
+shade_6.Name = "shade"
+shade_6.Parent = respawn_script
+shade_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shade_6.BorderSizePixel = 0
+shade_6.Position = UDim2.new(0, 5, 0, 5)
+shade_6.Size = UDim2.new(1, 0, 1, 0)
+shade_6.ZIndex = 2
+
+text.Name = "text"
+text.Parent = border
+text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+text.BackgroundTransparency = 1.000
+text.Position = UDim2.new(0.00999999978, 0, 0, 0)
+text.Size = UDim2.new(0, 588, 0, 35)
+text.ZIndex = 7
+text.Font = Enum.Font.RobotoMono
+text.Text = "PP Script | Xiocib's - { XSDSSD_g }"
+text.TextColor3 = Color3.fromRGB(255, 255, 255)
+text.TextSize = 17.000
+text.TextWrapped = true
+text.TextXAlignment = Enum.TextXAlignment.Left
+
+game:GetService("TweenService"):Create(border, TweenInfo.new(3, Enum.EasingStyle.Back, Enum.EasingDirection.InOut, 0, false, 0), {Position = UDim2.new(0.261, 0,0.309, 0); Rotation = 0}):Play()
+wait(3)
+
+-- Scripts:
+
+local function BKUYAD_fake_script() -- border.draglmaolmao 
+	local script = Instance.new('LocalScript', border)
+
+	--ITS FREEE
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0.5
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(BKUYAD_fake_script)()
+local function KTPO_fake_script() -- pp_script.click 
+	local script = Instance.new('LocalScript', pp_script)
+
+	print("Hello world!")
+	
+end
+coroutine.wrap(KTPO_fake_script)()
+local function GKCJ_fake_script() -- ui.uig 
+	local script = Instance.new('LocalScript', ui)
+	local sfx = Instance.new("Sound", script)
+	sfx.Name = "UI Click"
+	sfx.Volume = 2
+	sfx.SoundId = "rbxassetid://6895079853"
+	for _, button in pairs(script.Parent:GetDescendants()) do
+		pcall(function()
+			if button:IsA("TextButton") then
+				button.MouseButton1Down:Connect(function()
+					script["UI Click"]:Play()
+				end)
+			end
+		end)
+	end
+end
+coroutine.wrap(GKCJ_fake_script)()
+local sfx = Instance.new("Sound", ui)
+sfx.Volume = 2
+sfx.SoundId = "rbxassetid://10066936758"
+for _, gun in pairs(ui:GetDescendants()) do
+	pcall(function()
+		if gun:IsA("TextButton") then
+			gun.MouseEnter:Connect(function()
+				sfx:Play()
+			end)
+		end
+	end)
+end
+
+sendmessage(" Loaded .", " Successfully !", "rbxassetid://8126977748")
